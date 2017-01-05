@@ -1,3 +1,13 @@
+html {
+	box-sizing: border-box;
+}
+.jumbotron{
+	background-color: rgba(39,43,48, 0.70);
+}
+.jumbotron{
+	text-align: center;
+	color:crimson;
+}
 img{
 	width: 100px;
 	height: 100px
@@ -5,7 +15,10 @@ img{
 
 body{
      background-image: url("../../assets/images/battlestar_backround_3.jpg");
-     background-size: 1382px 650px;
+     /*background-size: 1382px 650px;*/
+     background-repeat: no-repeat;
+     background-size: cover;
+
 
 
 }
@@ -13,51 +26,62 @@ body{
 
 h1,h2{
 	color: crimson;}
+.allChar img{
+	height:180px;
+	width:180px;
+	margin-left:16px;
+	border-radius: 20px;
+}
+.allChar img:hover{
+	height:200px;
+	width:200px;
+	border: 2px solid white;
+	border-radius:40px;
+}
 
-
-header{
+/*header{
      border: red solid 4px;
      text-align: center;
      margin-left: 500px;
      margin-right: 500px;
-}
+}*/
 
-#starbuck_original{
-	/* border: red solid 4px;*/
+/*#starbuck_original{
+	 border: red solid 4px;
 	 float: left;
 }
 
 #starbuck_new{
-	 /*border: red solid 4px;*/
+	 border: red solid 4px;
 	 float: left;
 }
 
 #cylon_original{
-	 /*border: red solid 4px;*/
+	 border: red solid 4px;
 	 float: left;
 }
 
 #cylon_new{
-	 /*border: red solid 4px;*/
+	 border: red solid 4px;
 	 float: left;
 }
 .char_container{
 	width: 850px;
 	height: 225px;
-}
-
+}*/
+/*
 #battle_container{
 	border: yellow solid 4px;
 	width: 600px;
 	height: 400px;
 	float:right;
-
+*/
 
 }
 
 
-
+/*
 .character{
 	height: 100px;
 	width: 100px;
-}
+}*/

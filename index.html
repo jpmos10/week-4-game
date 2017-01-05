@@ -1,74 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-
-	<title>Battlestar Galactica New vs. Old</title>
-<!-- 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <title>Battlestar Galactica New vs. Old</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-	<div class="wrapper">
-		<div class="container">
+    <div class="wrapper">
+    	<div class="jumbotron">
+    		<div class="container">
+    			<h1 id="title">Battlestar Galactica New VS. Old</h1>
+                <h2 id="subtitle">Choose your Champion</h2>
+    		</div>
+    	</div>
+        <div class="row">
+        	<div class="col-md-2 charBox friendBox"></div>
+        	<div class="col-md-8 charBox allChar">
+        		<span id="starbuck_original" class=""><img src="assets/images/orig_starbuck_1.jpg" alt="Original Starbuck"></span>
 
-		   <header>
-			   <h1 id="title">Battlestar Galactica</h1>
-			   <h2 id="subtitle">New VS. Old</h2>
-		   </header>
-             <div id="char_container">
-		       <div id="starbuck_original" class="character">
-			         <img src="assets/images/orig_starbuck_1.jpg" alt="Original Starbuck">
-		       </div>
+        		<span id="starbuck_new" class=""><img src="assets/images/new_starbuck_2.jpg" alt="New Starbuck"></span>
 
-		       <div id="starbuck_new" class="character">
-			         <img src="assets/images/new_starbuck_2.jpg" alt="New Starbuck">
-		       </div>
+        		<span id="cylon_original" class=""><img src="assets/images/cylon_2.jpg" alt="Original Cylon"></span>
 
-               <div id="cylon_original" class="character">
-		        	<img src="assets/images/cylon_2.jpg" alt="Original Cylon">
-		       </div>
-			
-		       <div id="cylon_new" class="character">
-			        <img src="assets/images/new_cylon.jpg" alt="New Cylon">
-		       </div>
-		     </div>  
+        		<span id="cylon_new" class=""><img src="assets/images/new_cylon.jpg" alt="New Cylon"></span>
 
-		     <div id="battle_container"> <h2>Get Ready to Fight</h2>
-		     	
-		     	<div id="player1_hp"></div>
-
-		     </div> 
-
-		     <div id="comp_player">
-
-		     	<div id="comp_player_hp"></div>
-
-		     </div> 
-		     <div class="button"></div>
+        		
+        	</div>
+        	<div class="col-md-2 charBox enemyBox"></div>
 
 
 
-
-	</div>
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</div>
-
+        </div>
+            
+          <!--   <div id="char_container">
+                <div id="starbuck_original" class="character">
+                    <img src="assets/images/orig_starbuck_1.jpg" alt="Original Starbuck">
+                </div>
+                <div id="starbuck_new" class="character">
+                    <img src="assets/images/new_starbuck_2.jpg" alt="New Starbuck">
+                </div>
+                <div id="cylon_original" class="character">
+                    <img src="assets/images/cylon_2.jpg" alt="Original Cylon">
+                </div>
+                <div id="cylon_new" class="character">
+                    <img src="assets/images/new_cylon.jpg" alt="New Cylon">
+                </div>
+            </div> -->
+            <div class="row" id="battle_container">
+                <div class="col-lg-5"></div>
+                
+                <div class="col-lg-2">
+                    <div class="btn btn-danger chosenFont fightButton">Fight!</div>
+                    <div class="btn btn-success chosenFont resetButton">Reset.</div>
+                </div>
+                <div class="col-lg-5"></div>
+            <!--     <div id="player1_hp"></div>
+            </div>
+            <div id="comp_player">
+                <div id="comp_player_hp"></div>
+            </div> -->
+            <!-- <div class="button"></div> -->
+        </div>
+    </div>
 </body>
+<script src="assets/javascript/game.js"></script>
+
 </html>
