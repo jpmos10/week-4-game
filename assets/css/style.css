@@ -38,6 +38,9 @@ h1,h2{
 	border: 2px solid white;
 	border-radius:40px;
 }
+.hideMe{
+	display:none;
+}
 
 /*header{
      border: red solid 4px;

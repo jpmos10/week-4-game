@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+     
     <title>Battlestar Galactica New vs. Old</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -14,32 +15,23 @@
 
 <body>
     <div class="wrapper">
-    	<div class="jumbotron">
-    		<div class="container">
-    			<h1 id="title">Battlestar Galactica New VS. Old</h1>
-                <h2 id="subtitle">Choose your Champion</h2>
-    		</div>
-    	</div>
-        <div class="row">
-        	<div class="col-md-2 charBox friendBox"></div>
-        	<div class="col-md-8 charBox allChar">
-        		<span id="starbuck_original" class=""><img src="assets/images/orig_starbuck_1.jpg" alt="Original Starbuck"></span>
-
-        		<span id="starbuck_new" class=""><img src="assets/images/new_starbuck_2.jpg" alt="New Starbuck"></span>
-
-        		<span id="cylon_original" class=""><img src="assets/images/cylon_2.jpg" alt="Original Cylon"></span>
-
-        		<span id="cylon_new" class=""><img src="assets/images/new_cylon.jpg" alt="New Cylon"></span>
-
-        		
-        	</div>
-        	<div class="col-md-2 charBox enemyBox"></div>
-
-
-
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="title">Battlestar Galactica New VS. Old</h1>
+                <h2 class="subtitle instructionalText">Choose your Champion</h2>
+            </div>
         </div>
-            
-          <!--   <div id="char_container">
+        <div class="row">
+            <div class="col-md-2 charBox friendBox"></div>
+            <div class="col-md-8 charBox allChar">
+                <span id="originalStarbuck" class="charDivCenter"><img src="assets/images/originalStarbuck.jpg" alt="Original Starbuck"></span>
+                <span id="newStarbuck" class="charDivCenter"><img src="assets/images/newStarbuck.jpg" alt="New Starbuck"></span>
+                <span id="originalCylon" class="charDivCenter"><img src="assets/images/originalCylon.jpg" alt="Original Cylon"></span>
+                <span id="newCylon" class="charDivCenter"><img src="assets/images/newCylon.jpg" alt="New Cylon"></span>
+            </div>
+            <div class="col-md-2 charBox enemyBox"></div>
+        </div>
+        <!--   <div id="char_container">
                 <div id="starbuck_original" class="character">
                     <img src="assets/images/orig_starbuck_1.jpg" alt="Original Starbuck">
                 </div>
@@ -53,14 +45,14 @@
                     <img src="assets/images/new_cylon.jpg" alt="New Cylon">
                 </div>
             </div> -->
-            <div class="row" id="battle_container">
-                <div class="col-lg-5"></div>
-                
-                <div class="col-lg-2">
-                    <div class="btn btn-danger chosenFont fightButton">Fight!</div>
-                    <div class="btn btn-success chosenFont resetButton">Reset.</div>
-                </div>
-                <div class="col-lg-5"></div>
+        <div class="row" id="battle_container">
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2">
+                <div class="btn btn-danger fightButton">Fight!</div>
+                <div class="btn btn-success resetButton">Reset.</div>
+            </div>
+            <div class="col-lg-5">
+            </div>
             <!--     <div id="player1_hp"></div>
             </div>
             <div id="comp_player">
@@ -68,6 +60,7 @@
             </div> -->
             <!-- <div class="button"></div> -->
         </div>
+        <span class="resultsBox"></span>
     </div>
 </body>
 <script src="assets/javascript/game.js"></script>
