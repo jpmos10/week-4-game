@@ -125,7 +125,7 @@ $(".charDivCenter").hover(function() {
         their name, health points, attack, and even counter attack if we chose to. The code below 
         gets the name, HP, and attack and generates HTML containing it.*/
 
-        $(".instructionalText").html("<p>" + vitalStats.name + " has : " + vitalStats.hp + " Health Points and " + vitalStats.attack + " Attack Power.</p>");
+        $(".instructionalText").html("<p>" + vitalStats.name + " has : " + vitalStats.health + " Health Points and " + vitalStats.attack + " Attack Power.</p>");
 
     },
     /* above half runs on mouse enter hover area, 
