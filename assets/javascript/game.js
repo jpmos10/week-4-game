@@ -8,30 +8,30 @@ var characters = {
     originalStarbuck: {
         name: 'Original Starbuck',
         health: 120,
-        attack: 8,
+        attack: 10,
         imageUrl: "assets/images/orig_starbuck_1.jpg",
-        enemyAttackBack: 15
+        counterAttack: 15
     },
     newStarbuck: {
         name: 'New Starbuck',
         health: 100,
-        attack: 14,
+        attack: 8,
         imageUrl: "assets/images/new_starbuck_2.jpg",
-        enemyAttackBack: 5
+        counterAttack: 5
     },
     originalCylon: {
         name: 'Original Cylon',
         health: 150,
         attack: 8,
         imageUrl: "assets/images/cylon_2.jpg",
-        enemyAttackBack: 20
+        counterAttack: 10.
     },
     newCylon: {
         name: 'New Cylon',
         health: 180,
-        attack: 7,
+        attack: 10,
         imageUrl: "assets/images/new_cylon.jpg",
-        enemyAttackBack: 25
+        counterAttack: 25
     }
 };
 
@@ -45,30 +45,30 @@ function resetGame() {
         originalStarbuck: {
             name: 'Original Starbuck',
             health: 120,
-            attack: 8,
+            attack: 10,
             imageUrl: "assets/images/orig_starbuck_1.jpg",
-            enemyAttackBack: 15
+            counterAttack: 15
         },
         newStarbuck: {
             name: 'New Starbuck',
             health: 100,
-            attack: 14,
+            attack: 8,
             imageUrl: "assets/images/new_starbuck_2.jpg",
-            enemyAttackBack: 5
+            counterAttack: 5
         },
         originalCylon: {
             name: 'Original Cylon',
             health: 150,
             attack: 8,
             imageUrl: "assets/images/cylon_2.jpg",
-            enemyAttackBack: 20
+            counterAttack: 10
         },
         newCylon: {
             name: 'New Cylon',
             health: 180,
-            attack: 7,
+            attack: 10,
             imageUrl: "assets/images/new_cylon.jpg",
-            enemyAttackBack: 25
+            counterAttack: 25
         }
 
 
@@ -101,7 +101,7 @@ function defeatedPlayer() {
 
 function updateResultsText() {
     var resultsHtml = "<p> You attacked " + currentEnemy.name + " for " + playersCharacter.attack + " Health Points!</p>";
-    resultsHtml += "<p>" + currentEnemy.name + " has counter-attacked you for " + currentEnemy.enemyAttackBack + " Health Points!</p>"
+    resultsHtml += "<p>" + currentEnemy.name + " has counter-attacked you for " + currentEnemy.counterAttack + " Health Points!</p>"
     resultsHtml += "<p> You have " + playersCharacter.health + " Health Points remaining! </p>";
     resultsHtml += "<p>" + currentEnemy.name + " has " + currentEnemy.health + " Health Points remaining!</p>";
     $(".resultsBox").html(resultsHtml);
@@ -110,7 +110,7 @@ function updateResultsText() {
 function defeat() {
     if (currentEnemy.health < 1 && playersCharacter.health > 0) {
         defeatedEnemy();
-    } else if (playableCharacter.health < 1) {
+    } else if (playersCharacter.health < 1) {
         defeatedPlayer();
     }
 };
@@ -191,7 +191,7 @@ $(".fightButton").on("click", function() {
         /* remove enemy health based on your character attack */
         currentEnemy.health -= playersCharacter.attack;
         /* remove your health based on their counter attack */
-        playersCharacter.health -= currentEnemy.enemyAttackBack;
+        playersCharacter.health -= currentEnemy.counterAttack;
         /* run function to post results */
         updateResultsText();
         /* increment attack based on global variable we declared earlier */
